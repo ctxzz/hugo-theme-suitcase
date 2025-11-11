@@ -1,0 +1,67 @@
+{{ define "main" }}
+  <div class="taxonomy-single-page">
+    <header class="taxonomy-single-header">
+      <div class="taxonomy-breadcrumb">
+        <a href="{{ .Data.Plural | relURL }}">
+          {{ if eq .Data.Plural "tags" }}🏷️ タグ一覧{{ else }}📂 トピック一覧{{ end }}
+        </a>
+        <span class="breadcrumb-separator">›</span>
+        <span class="current">{{ .Title }}</span>
+      </div>
+
+      <h1 class="taxonomy-single-title">
+        {{ if eq .Data.Plural "tags" }}🏷️{{ else }}📂{{ end }}
+        {{ .Title }}
+      </h1>
+
+      <p class="taxonomy-single-count">{{ len .Pages }} 件の記事</p>
+    </header>
+
+    <div class="taxonomy-posts-list">
+      {{ range .Pages.GroupByDate "2006" }}
+      <section class="posts-year-group">
+        <h2 class="year-heading">{{ .Key }}</h2>
+        <div class="posts-in-year">
+          {{ range .Pages }}
+            {{ if or (not .Params.visibility) (eq .Params.visibility "public") }}
+            <article class="taxonomy-post-item">
+              <div class="post-item-header">
+                <h3 class="post-item-title">
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h3>
+                <time class="post-item-date" datetime="{{ .Date.Format "2006-01-02" }}">
+                  {{ .Date.Format "2006/01/02" }}
+                </time>
+              </div>
+
+              {{ with .Params.topics }}
+              <div class="post-item-topics">
+                📂
+                {{ range first 3 . }}
+                <span class="topic-badge">{{ . }}</span>
+                {{ end }}
+              </div>
+              {{ end }}
+
+              {{ with .Summary }}
+              <div class="post-item-summary">
+                {{ . | truncate 200 }}
+              </div>
+              {{ end }}
+
+              {{ with .Params.tags }}
+              <div class="post-item-tags">
+                {{ range first 5 . }}
+                <span class="tag-small">{{ . }}</span>
+                {{ end }}
+              </div>
+              {{ end }}
+            </article>
+            {{ end }}
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

@@ -3,8 +3,10 @@
     <p class="footer-text">
       &copy; {{ now.Year }} {{ .Site.Title }}. Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> & <strong>Suitcase</strong> theme.
     </p>
+    {{ with .Site.Params.footerText }}
     <p class="footer-subtitle">
-      {{ .Site.Params.footerText | default "AI Knowledge Suitcase — 知識を旅するための静かな書斎" }}
+      {{ . }}
     </p>
+    {{ end }}
   </div>
 </footer>

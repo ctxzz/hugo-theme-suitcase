@@ -261,10 +261,23 @@ body.light-mode .tag-cloud-item .count {
   color: #999;
 }
 
-body.light-mode .post-tags,
-body.light-mode .recent-posts h2,
-body.light-mode .featured-tags h2 {
+body.light-mode .post-tags {
   border-color: #e0e0e0;
+}
+
+body.light-mode .post-tags h3 {
+  color: #1a1a1a;
+}
+
+body.light-mode .recent-posts h2,
+body.light-mode .featured-tags h2,
+body.light-mode .list-header h1 {
+  color: #1a1a1a;
+  border-color: #e0e0e0;
+}
+
+body.light-mode .list-description {
+  color: #666;
 }
 
 body.light-mode .related-posts,
@@ -308,6 +321,118 @@ body.light-mode a:hover {
 }
 
 body.light-mode .footer-content a {
+  color: #0066cc;
+}
+
+/* ==================== Taxonomy Light Mode ==================== */
+body.light-mode .taxonomy-page,
+body.light-mode .taxonomy-single-page {
+  background-color: #ffffff;
+  border-color: #e0e0e0;
+}
+
+body.light-mode .taxonomy-header,
+body.light-mode .taxonomy-single-header {
+  border-bottom-color: #e0e0e0;
+}
+
+body.light-mode .taxonomy-header h1,
+body.light-mode .taxonomy-single-title {
+  color: #1a1a1a;
+}
+
+body.light-mode .taxonomy-description {
+  color: #666;
+}
+
+body.light-mode .taxonomy-count,
+body.light-mode .taxonomy-single-count {
+  color: #999;
+}
+
+body.light-mode .taxonomy-card {
+  background-color: #f8f9fa;
+  border-color: #e0e0e0;
+}
+
+body.light-mode .taxonomy-card:hover {
+  border-color: #d0d0d0;
+}
+
+body.light-mode .taxonomy-name {
+  color: #1a1a1a;
+}
+
+body.light-mode .taxonomy-count-badge {
+  background-color: #e8f4ff;
+  color: #0066cc;
+}
+
+body.light-mode .taxonomy-preview {
+  border-top-color: #e0e0e0;
+}
+
+body.light-mode .taxonomy-preview-item {
+  color: #555;
+}
+
+body.light-mode .taxonomy-preview-more {
+  color: #999;
+}
+
+body.light-mode .taxonomy-breadcrumb {
+  color: #666;
+}
+
+body.light-mode .taxonomy-breadcrumb a {
+  color: #0066cc;
+}
+
+body.light-mode .breadcrumb-separator {
+  color: #999;
+}
+
+body.light-mode .taxonomy-breadcrumb .current {
+  color: #333;
+}
+
+body.light-mode .year-heading {
+  color: #1a1a1a;
+  border-bottom-color: #d0d0d0;
+}
+
+body.light-mode .taxonomy-post-item {
+  background-color: #f8f9fa;
+  border-color: #e0e0e0;
+}
+
+body.light-mode .taxonomy-post-item:hover {
+  box-shadow: -4px 0 0 #0066cc;
+}
+
+body.light-mode .taxonomy-post-item .post-item-title a {
+  color: #1a1a1a;
+}
+
+body.light-mode .post-item-date {
+  color: #666;
+}
+
+body.light-mode .post-item-topics {
+  color: #666;
+}
+
+body.light-mode .topic-badge {
+  background-color: #e0e0e0;
+  color: #555;
+}
+
+body.light-mode .taxonomy-post-item .post-item-summary {
+  color: #555;
+}
+
+body.light-mode .tag-small {
+  background-color: #e8f4ff;
   color: #0066cc;
 }
 

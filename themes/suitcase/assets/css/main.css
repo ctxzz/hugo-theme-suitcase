@@ -760,3 +760,222 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: #4a4a4a;
 }
+
+/* ==================== Taxonomy Pages ==================== */
+.taxonomy-page,
+.taxonomy-single-page {
+  background-color: #181818;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.taxonomy-header,
+.taxonomy-single-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #2a2a2a;
+}
+
+.taxonomy-header h1,
+.taxonomy-single-title {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.taxonomy-description {
+  color: #888;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.taxonomy-count,
+.taxonomy-single-count {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Taxonomy Grid (for tags/topics list) */
+.taxonomy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.taxonomy-card {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.taxonomy-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: #3a3a3a;
+}
+
+.taxonomy-link {
+  display: block;
+  padding: 1.5rem;
+  text-decoration: none;
+}
+
+.taxonomy-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.taxonomy-meta {
+  margin-bottom: 1rem;
+}
+
+.taxonomy-count-badge {
+  display: inline-block;
+  background-color: #2a2a2a;
+  color: #7cc0ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.taxonomy-preview {
+  border-top: 1px solid #2a2a2a;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.taxonomy-preview-item {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.taxonomy-preview-more {
+  color: #666;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Taxonomy Single Page (individual tag/topic) */
+.taxonomy-breadcrumb {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.taxonomy-breadcrumb a {
+  color: #7cc0ff;
+}
+
+.breadcrumb-separator {
+  margin: 0 0.5rem;
+  color: #666;
+}
+
+.taxonomy-breadcrumb .current {
+  color: #b0b0b0;
+}
+
+.taxonomy-posts-list {
+  margin-top: 2rem;
+}
+
+.posts-year-group {
+  margin-bottom: 3rem;
+}
+
+.year-heading {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3a3a3a;
+}
+
+.posts-in-year {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.taxonomy-post-item {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.taxonomy-post-item:hover {
+  transform: translateX(4px);
+  box-shadow: -4px 0 0 #7cc0ff;
+}
+
+.post-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.taxonomy-post-item .post-item-title {
+  font-size: 1.2rem;
+  margin: 0;
+  flex: 1;
+}
+
+.taxonomy-post-item .post-item-title a {
+  color: #ffffff;
+}
+
+.post-item-date {
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.post-item-topics {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.75rem;
+}
+
+.topic-badge {
+  display: inline-block;
+  background-color: #2a2a2a;
+  color: #b0b0b0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.taxonomy-post-item .post-item-summary {
+  color: #b0b0b0;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.post-item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-small {
+  background-color: #2a2a2a;
+  color: #7cc0ff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
