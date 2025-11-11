@@ -13,7 +13,7 @@
       "summary" (.Summary | plainify)
       "tags" .Params.tags
       "topics" .Params.topics
-      "date" .Date.Format "2006-01-02"
+      "date" (dateFormat "2006-01-02" .Date)
     -}}
     {{- $searchData = $searchData | append $item -}}
   {{- end -}}
