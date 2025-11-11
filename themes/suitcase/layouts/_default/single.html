@@ -1,0 +1,25 @@
+{{ define "main" }}
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">{{ .Title }}</h1>
+      {{ partial "metadata.html" . }}
+    </header>
+
+    <div class="post-body">
+      {{ .Content }}
+    </div>
+
+    {{ if .Params.tags }}
+    <div class="post-tags">
+      <h3>🏷️ タグ</h3>
+      <ul class="tag-list">
+        {{ range .Params.tags }}
+        <li><a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{ partial "related.html" . }}
+  </article>
+{{ end }}

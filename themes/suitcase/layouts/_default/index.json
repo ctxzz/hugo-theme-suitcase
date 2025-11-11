@@ -1,0 +1,22 @@
+{{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+{{- if not .Site.Params.mainSections -}}
+  {{- $pages = .Site.RegularPages -}}
+{{- end -}}
+
+{{- $searchData := slice -}}
+
+{{- range $pages -}}
+  {{- if or (not .Params.visibility) (eq .Params.visibility "public") -}}
+    {{- $item := dict
+      "title" .Title
+      "permalink" .RelPermalink
+      "summary" (.Summary | plainify)
+      "tags" .Params.tags
+      "topics" .Params.topics
+      "date" .Date.Format "2006-01-02"
+    -}}
+    {{- $searchData = $searchData | append $item -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $searchData | jsonify -}}

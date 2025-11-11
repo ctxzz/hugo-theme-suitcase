@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="header-content">
+    <div class="logo">
+      <a href="{{ .Site.BaseURL | relURL }}">
+        <img src="{{ "logo.svg" | relURL }}" alt="{{ .Site.Title }}" class="logo-img">
+        <span class="site-title">{{ .Site.Title }}</span>
+      </a>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="{{ .Site.BaseURL | relURL }}">ホーム</a></li>
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="ダークモード切替">
+      <span class="toggle-icon">🌙</span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,59 @@
+<div class="metadata">
+  <ul class="metadata-list">
+    {{ with .Date }}
+    <li class="metadata-item">
+      <span class="metadata-icon">📅</span>
+      <span class="metadata-label">作成日:</span>
+      <span class="metadata-value">{{ .Format "2006-01-02" }}</span>
+    </li>
+    {{ end }}
+
+    {{ with .Params.updated }}
+    <li class="metadata-item">
+      <span class="metadata-icon">🕓</span>
+      <span class="metadata-label">更新日:</span>
+      <span class="metadata-value">{{ . }}</span>
+    </li>
+    {{ end }}
+
+    {{ with .Params.topics }}
+    <li class="metadata-item">
+      <span class="metadata-icon">📂</span>
+      <span class="metadata-label">トピック:</span>
+      <span class="metadata-value">{{ delimit . ", " }}</span>
+    </li>
+    {{ end }}
+
+    {{ with .Params.confidence }}
+    <li class="metadata-item">
+      <span class="metadata-icon">🔸</span>
+      <span class="metadata-label">信頼度:</span>
+      <span class="metadata-value">{{ . }}</span>
+    </li>
+    {{ end }}
+
+    {{ with .Params.stage }}
+    <li class="metadata-item">
+      <span class="metadata-icon">📊</span>
+      <span class="metadata-label">ステージ:</span>
+      <span class="metadata-value">{{ . }}</span>
+    </li>
+    {{ end }}
+
+    {{ with .Params.source }}
+    <li class="metadata-item">
+      <span class="metadata-icon">🔗</span>
+      <span class="metadata-label">ソース:</span>
+      <span class="metadata-value">{{ . }}</span>
+    </li>
+    {{ end }}
+
+    {{ with .ReadingTime }}
+    <li class="metadata-item">
+      <span class="metadata-icon">⏱️</span>
+      <span class="metadata-label">読了時間:</span>
+      <span class="metadata-value">約{{ . }}分</span>
+    </li>
+    {{ end }}
+  </ul>
+</div>

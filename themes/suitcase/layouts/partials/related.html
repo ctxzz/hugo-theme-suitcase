@@ -1,0 +1,36 @@
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<div class="related-posts">
+  <h3>🔗 関連記事</h3>
+  <ul class="related-list">
+    {{ range . }}
+    <li class="related-item">
+      <a href="{{ .RelPermalink }}">
+        <span class="related-title">{{ .Title }}</span>
+        {{ with .Params.topics }}
+        <span class="related-topics">📂 {{ delimit . ", " }}</span>
+        {{ end }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+{{ with .Params.related }}
+<div class="manual-related">
+  <h3>📎 関連リンク (手動設定)</h3>
+  <ul class="manual-related-list">
+    {{ range . }}
+    <li>
+      {{ $page := $.Site.GetPage . }}
+      {{ if $page }}
+      <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+      {{ else }}
+      <span>{{ . }}</span>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

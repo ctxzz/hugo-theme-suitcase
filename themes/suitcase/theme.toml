@@ -1,0 +1,11 @@
+name = "Suitcase"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "A minimal and extensible Hugo theme for AI-driven knowledge bases."
+homepage = "https://github.com/yourname/hugo-theme-suitcase"
+tags = ["knowledge", "hugo-theme", "ai", "minimal", "docs"]
+min_version = "0.120.0"
+
+[author]
+  name = "AI Knowledge Suitcase"
+  homepage = "https://github.com/yourname/hugo-theme-suitcase"

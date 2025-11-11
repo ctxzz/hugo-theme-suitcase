@@ -1,0 +1,67 @@
+{{ define "main" }}
+  <div class="home-page">
+    <section class="hero">
+      <h1 class="hero-title">{{ .Site.Title }}</h1>
+      <p class="hero-subtitle">
+        {{ .Site.Params.description | default "AI Knowledge Suitcase — 知識を旅するための静かな書斎" }}
+      </p>
+    </section>
+
+    <section class="recent-posts">
+      <h2>📝 最新の記事</h2>
+      <div class="posts-grid">
+        {{ range first 10 .Site.RegularPages }}
+          {{ if or (not .Params.visibility) (eq .Params.visibility "public") }}
+          <article class="post-card">
+            <h3 class="post-card-title">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h3>
+
+            <div class="post-card-meta">
+              {{ with .Params.updated }}
+              <span class="post-date">🕓 {{ . }}</span>
+              {{ end }}
+              {{ with .Params.topics }}
+              <span class="post-topics">📂 {{ delimit (first 2 .) ", " }}</span>
+              {{ end }}
+            </div>
+
+            {{ with .Summary }}
+            <div class="post-card-summary">
+              {{ . | truncate 150 }}
+            </div>
+            {{ end }}
+
+            {{ with .Params.tags }}
+            <div class="post-card-tags">
+              {{ range first 3 . }}
+              <span class="tag">{{ . }}</span>
+              {{ end }}
+            </div>
+            {{ end }}
+
+            {{ with .Params.confidence }}
+            <div class="post-card-confidence">
+              <span class="confidence-badge">信頼度: {{ . }}</span>
+            </div>
+            {{ end }}
+          </article>
+          {{ end }}
+        {{ end }}
+      </div>
+    </section>
+
+    {{ if .Site.Taxonomies.tags }}
+    <section class="featured-tags">
+      <h2>🏷️ 注目タグ</h2>
+      <div class="tag-cloud-large">
+        {{ range first 20 .Site.Taxonomies.tags.ByCount }}
+        <a href="{{ "tags" | relURL }}/{{ .Name | urlize }}" class="tag-cloud-item">
+          {{ .Name }} <span class="count">({{ .Count }})</span>
+        </a>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+  </div>
+{{ end }}

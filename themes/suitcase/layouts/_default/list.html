@@ -1,0 +1,45 @@
+{{ define "main" }}
+  <div class="list-page">
+    <header class="list-header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}
+      <p class="list-description">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="posts-list">
+      {{ range .Pages }}
+        {{ if or (not .Params.visibility) (eq .Params.visibility "public") }}
+        <article class="post-item">
+          <h2 class="post-item-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
+
+          <div class="post-item-meta">
+            {{ with .Params.updated }}
+            <span class="post-date">🕓 {{ . }}</span>
+            {{ end }}
+            {{ with .Params.topics }}
+            <span class="post-topics">📂 {{ delimit . ", " }}</span>
+            {{ end }}
+          </div>
+
+          {{ with .Summary }}
+          <div class="post-item-summary">
+            {{ . }}
+          </div>
+          {{ end }}
+
+          {{ with .Params.tags }}
+          <div class="post-item-tags">
+            {{ range . }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
+        </article>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

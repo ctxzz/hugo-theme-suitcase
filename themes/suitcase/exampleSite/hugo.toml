@@ -1,0 +1,37 @@
+baseURL = "https://example.com/"
+languageCode = "ja"
+title = "AI Knowledge Suitcase"
+theme = "suitcase"
+
+[params]
+  description = "AI Knowledge Suitcase — 知識を旅するための静かな書斎"
+  footerText = "知識を旅するための静かな書斎"
+  sidebarText = "AIと人間が共同で生成した知識を体系的に保存・再利用するためのナレッジベースです。"
+
+# 検索インデックスの生成を有効化
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# タクソノミー設定
+[taxonomies]
+  tag = "tags"
+  topic = "topics"
+
+# メニュー設定
+[[menu.main]]
+  name = "タグ"
+  url = "/tags/"
+  weight = 1
+
+[[menu.main]]
+  name = "トピック"
+  url = "/topics/"
+  weight = 2
+
+# Hugo設定
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
+  [markup.goldmark.renderer]
+    unsafe = true

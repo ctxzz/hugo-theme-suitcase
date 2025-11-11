@@ -1,0 +1,53 @@
+<aside class="sidebar">
+  {{ partial "search.html" . }}
+
+  <nav class="sidebar-nav">
+    <h3>📚 ナビゲーション</h3>
+    <ul>
+      <li><a href="{{ .Site.BaseURL | relURL }}">ホーム</a></li>
+      <li><a href="{{ "tags" | relURL }}">タグ一覧</a></li>
+      <li><a href="{{ "topics" | relURL }}">トピック一覧</a></li>
+    </ul>
+  </nav>
+
+  {{ if .Site.Taxonomies.tags }}
+  <div class="sidebar-section">
+    <h3>🏷️ 人気タグ</h3>
+    <ul class="tag-cloud">
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        {{ if gt (len $taxonomy.Pages) 0 }}
+        <li>
+          <a href="{{ "tags" | relURL }}/{{ $name | urlize }}">
+            {{ $name }} <span class="tag-count">({{ len $taxonomy.Pages }})</span>
+          </a>
+        </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  {{ if .Site.Taxonomies.topics }}
+  <div class="sidebar-section">
+    <h3>📂 トピック</h3>
+    <ul class="topic-list">
+      {{ range $name, $taxonomy := .Site.Taxonomies.topics }}
+        {{ if gt (len $taxonomy.Pages) 0 }}
+        <li>
+          <a href="{{ "topics" | relURL }}/{{ $name | urlize }}">
+            {{ $name }} <span class="topic-count">({{ len $taxonomy.Pages }})</span>
+          </a>
+        </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  {{ with .Site.Params.sidebarText }}
+  <div class="sidebar-section sidebar-about">
+    <h3>💡 About</h3>
+    <p>{{ . }}</p>
+  </div>
+  {{ end }}
+</aside>
