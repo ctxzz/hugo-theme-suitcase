@@ -343,10 +343,6 @@ body.light-mode .taxonomy-single-title {
   color: #1a1a1a;
 }
 
-body.light-mode .taxonomy-description {
-  color: #666;
-}
-
 body.light-mode .taxonomy-count,
 body.light-mode .taxonomy-single-count {
   color: #999;
