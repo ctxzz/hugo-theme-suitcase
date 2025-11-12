@@ -32,5 +32,8 @@
 
     {{ $searchJS := resources.Get "js/search.js" }}
     <script src="{{ $searchJS.RelPermalink }}" defer></script>
+
+    {{ $copyJS := resources.Get "js/copy.js" }}
+    <script src="{{ $copyJS.RelPermalink }}" defer></script>
   </body>
 </html>
