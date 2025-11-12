@@ -191,8 +191,6 @@ body.light-mode .post-body h4 {
 body.light-mode .post-body code {
   background-color: #e8e8e8;
   color: #c7254e;
-  border: 1px solid #d0d0d0;
-  padding: 0.2rem 0.5rem;
 }
 
 body.light-mode .post-body pre {
