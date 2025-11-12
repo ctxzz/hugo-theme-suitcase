@@ -31,6 +31,6 @@ theme = "suitcase"
 [markup]
   [markup.highlight]
     noClasses = false
-    lineNos = true
+    lineNos = false
   [markup.goldmark.renderer]
     unsafe = true

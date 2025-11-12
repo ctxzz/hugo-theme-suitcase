@@ -236,13 +236,11 @@ body.light-mode .post-body h4 {
 body.light-mode .post-body code {
   background-color: #fff5f5;
   color: #e53e3e;
-  border: 1px solid #feb2b2;
   padding: 0.2rem 0.5rem;
 }
 
 body.light-mode .post-body pre {
   background-color: #f7f9fb;
-  border: 1px solid #cbd5e0;
 }
 
 body.light-mode .post-body pre code {
