@@ -295,6 +295,27 @@ body.light-mode .chroma .n { color: #24292e; } /* Name */
 body.light-mode .chroma .nl { color: #24292e; } /* Name Label */
 body.light-mode .chroma .bp { color: #005cc5; } /* Name Builtin Pseudo */
 
+/* Copy Button for Light Mode */
+body.light-mode .copy-button {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+}
+
+body.light-mode .copy-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .copy-button:active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .copy-button.copied {
+  background-color: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.3);
+  color: #16a34a;
+}
+
 body.light-mode .post-body blockquote {
   border-left-color: #0066cc;
   color: #555;
