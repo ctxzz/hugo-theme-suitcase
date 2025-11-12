@@ -31,10 +31,6 @@ body.dark-mode .search-input {
   color: #e0e0e0;
 }
 
-body.dark-mode .theme-toggle .toggle-icon::before {
-  content: '🌙';
-}
-
 /* ==================== Light Mode ==================== */
 body.light-mode {
   background-color: #f5f5f5;
@@ -125,10 +121,6 @@ body.light-mode .theme-toggle {
 
 body.light-mode .theme-toggle:hover {
   background-color: #f0f0f0;
-}
-
-body.light-mode .theme-toggle .toggle-icon::before {
-  content: '☀️';
 }
 
 body.light-mode .hero-title,
@@ -350,34 +342,21 @@ body.light-mode .taxonomy-single-count {
   color: #999;
 }
 
-body.light-mode .taxonomy-card {
+body.light-mode .taxonomy-item {
+  border-bottom-color: #e0e0e0;
+}
+
+body.light-mode .taxonomy-item-link:hover {
   background-color: #f8f9fa;
-  border-color: #e0e0e0;
 }
 
-body.light-mode .taxonomy-card:hover {
-  border-color: #d0d0d0;
-}
-
-body.light-mode .taxonomy-name {
+body.light-mode .taxonomy-item-name {
   color: #1a1a1a;
 }
 
-body.light-mode .taxonomy-count-badge {
+body.light-mode .taxonomy-item-count {
   background-color: #e8f4ff;
   color: #0066cc;
-}
-
-body.light-mode .taxonomy-preview {
-  border-top-color: #e0e0e0;
-}
-
-body.light-mode .taxonomy-preview-item {
-  color: #555;
-}
-
-body.light-mode .taxonomy-preview-more {
-  color: #999;
 }
 
 body.light-mode .taxonomy-breadcrumb {

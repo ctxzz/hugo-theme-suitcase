@@ -2,41 +2,21 @@
   <div class="taxonomy-page">
     <header class="taxonomy-header">
       <h1>{{ .Title }}</h1>
-      <p class="taxonomy-description">
-        {{ if eq .Data.Plural "tags" }}
-        タグ別に記事を分類しています。
-        {{ else if eq .Data.Plural "topics" }}
-        トピック別に記事を分類しています。
-        {{ end }}
-      </p>
       <p class="taxonomy-count">全 {{ len .Data.Terms }} 件</p>
     </header>
 
-    <div class="taxonomy-grid">
-      {{ range .Data.Terms.Alphabetical }}
+    <div class="taxonomy-list">
+      {{ range .Data.Terms.ByCount }}
         {{ if gt .Count 0 }}
-        <article class="taxonomy-card">
-          <a href="{{ .Page.RelPermalink }}" class="taxonomy-link">
-            <div class="taxonomy-name">
+        <div class="taxonomy-item">
+          <a href="{{ .Page.RelPermalink }}" class="taxonomy-item-link">
+            <span class="taxonomy-item-name">
               {{ if eq $.Data.Plural "tags" }}🏷️{{ else }}📂{{ end }}
               {{ .Page.Title }}
-            </div>
-            <div class="taxonomy-meta">
-              <span class="taxonomy-count-badge">{{ .Count }} 件の記事</span>
-            </div>
-
-            {{ with .Pages }}
-            <div class="taxonomy-preview">
-              {{ range first 3 . }}
-              <div class="taxonomy-preview-item">{{ .Title }}</div>
-              {{ end }}
-              {{ if gt (len .) 3 }}
-              <div class="taxonomy-preview-more">...他 {{ sub (len .) 3 }} 件</div>
-              {{ end }}
-            </div>
-            {{ end }}
+            </span>
+            <span class="taxonomy-item-count">{{ .Count }}</span>
           </a>
-        </article>
+        </div>
         {{ end }}
       {{ end }}
     </div>
