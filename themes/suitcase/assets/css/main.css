@@ -508,6 +508,19 @@ img {
   font-weight: 600;
 }
 
+.post-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.post-body p img {
+  margin: 1.5rem auto;
+}
+
 .post-tags {
   margin-top: 2rem;
   padding-top: 1.5rem;

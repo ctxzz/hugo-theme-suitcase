@@ -221,6 +221,11 @@ body.light-mode .post-body th {
   background-color: #f8f9fa;
 }
 
+body.light-mode .post-body img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+}
+
 body.light-mode .post-card-summary,
 body.light-mode .post-item-summary {
   color: #555;

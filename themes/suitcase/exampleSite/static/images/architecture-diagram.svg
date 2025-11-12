@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7cc0ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a9eff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#90ee90;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60d060;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffb366;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9933;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333">Hugo テーマアーキテクチャ</text>
+
+  <!-- Frontend Layer -->
+  <rect x="50" y="80" width="200" height="120" rx="10" fill="url(#grad1)" stroke="#2a2a2a" stroke-width="2"/>
+  <text x="150" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">Frontend</text>
+  <text x="150" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff">HTML Templates</text>
+  <text x="150" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff">CSS Styles</text>
+  <text x="150" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff">JavaScript</text>
+
+  <!-- Content Layer -->
+  <rect x="300" y="80" width="200" height="120" rx="10" fill="url(#grad2)" stroke="#2a2a2a" stroke-width="2"/>
+  <text x="400" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">Content</text>
+  <text x="400" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff">Markdown Files</text>
+  <text x="400" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff">Front Matter</text>
+  <text x="400" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff">Images</text>
+
+  <!-- Build Layer -->
+  <rect x="550" y="80" width="200" height="120" rx="10" fill="url(#grad3)" stroke="#2a2a2a" stroke-width="2"/>
+  <text x="650" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">Build</text>
+  <text x="650" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff">Hugo Engine</text>
+  <text x="650" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff">Asset Pipeline</text>
+  <text x="650" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff">Static Output</text>
+
+  <!-- Arrows -->
+  <!-- Frontend to Content -->
+  <path d="M 250 140 L 300 140" stroke="#333" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Content to Build -->
+  <path d="M 500 140 L 550 140" stroke="#333" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Output -->
+  <rect x="250" y="260" width="300" height="80" rx="10" fill="#e8f4ff" stroke="#0066cc" stroke-width="2"/>
+  <text x="400" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0066cc">Static Website</text>
+  <text x="400" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">HTML + CSS + JS</text>
+
+  <!-- Arrow from Build to Output -->
+  <path d="M 650 200 L 650 240 L 400 240 L 400 260" stroke="#333" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+</svg>
