@@ -189,19 +189,19 @@ body.light-mode .post-body h4 {
 }
 
 body.light-mode .post-body code {
-  background-color: #f0f0f0;
-  color: #d73a49;
-  border: 1px solid #d1d5da;
+  background-color: #fff5f5;
+  color: #e53e3e;
+  border: 1px solid #feb2b2;
   padding: 0.2rem 0.5rem;
 }
 
 body.light-mode .post-body pre {
-  background-color: #f6f8fa;
-  border: 1px solid #d1d5da;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e0;
 }
 
 body.light-mode .post-body pre code {
-  color: #24292e;
+  color: #2d3748;
   background: none;
   border: none;
   padding: 0;
