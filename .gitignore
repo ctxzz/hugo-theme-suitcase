@@ -2,6 +2,7 @@
 public/
 resources/
 .hugo_build.lock
+hugo_*.tar.gz
 
 # OS
 .DS_Store
