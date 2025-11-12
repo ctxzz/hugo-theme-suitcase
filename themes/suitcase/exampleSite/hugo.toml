@@ -4,9 +4,8 @@ title = "AI Knowledge Suitcase"
 theme = "suitcase"
 
 [params]
-  description = "AI Knowledge Suitcase — 知識を旅するための静かな書斎"
-  footerText = "知識を旅するための静かな書斎"
-  sidebarText = "AIと人間が共同で生成した知識を体系的に保存・再利用するためのナレッジベースです。"
+  description = "AI-driven knowledge base"
+  sidebarText = "AIと人間が共同で生成した知識を体系的に管理するナレッジベースです。"
 
 # 検索インデックスの生成を有効化
 [outputs]

@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <div class="taxonomy-page">
+    <header class="taxonomy-header">
+      <h1>{{ .Title }}</h1>
+      <p class="taxonomy-count">全 {{ len .Data.Terms }} 件</p>
+    </header>
+
+    <div class="taxonomy-list">
+      {{ range .Data.Terms.ByCount }}
+        {{ if gt .Count 0 }}
+        <div class="taxonomy-item">
+          <a href="{{ .Page.RelPermalink }}" class="taxonomy-item-link">
+            <span class="taxonomy-item-name">
+              {{ if eq $.Data.Plural "tags" }}🏷️{{ else }}📂{{ end }}
+              {{ .Page.Title }}
+            </span>
+            <span class="taxonomy-item-count">{{ .Count }}</span>
+          </a>
+        </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

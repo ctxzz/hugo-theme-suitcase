@@ -31,10 +31,6 @@ body.dark-mode .search-input {
   color: #e0e0e0;
 }
 
-body.dark-mode .theme-toggle .toggle-icon::before {
-  content: '🌙';
-}
-
 /* ==================== Light Mode ==================== */
 body.light-mode {
   background-color: #f5f5f5;
@@ -127,10 +123,6 @@ body.light-mode .theme-toggle:hover {
   background-color: #f0f0f0;
 }
 
-body.light-mode .theme-toggle .toggle-icon::before {
-  content: '☀️';
-}
-
 body.light-mode .hero-title,
 body.light-mode .post-title,
 body.light-mode .post-card-title a,
@@ -197,17 +189,20 @@ body.light-mode .post-body h4 {
 }
 
 body.light-mode .post-body code {
-  background-color: #f5f5f5;
-  color: #d63384;
+  background-color: #e8e8e8;
+  color: #c7254e;
 }
 
 body.light-mode .post-body pre {
-  background-color: #f8f9fa;
-  border-color: #e0e0e0;
+  background-color: #f8f8f8;
+  border-color: #d0d0d0;
 }
 
 body.light-mode .post-body pre code {
-  color: #1a1a1a;
+  color: #f8f8f2;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 body.light-mode .post-body blockquote {
@@ -222,6 +217,11 @@ body.light-mode .post-body td {
 
 body.light-mode .post-body th {
   background-color: #f8f9fa;
+}
+
+body.light-mode .post-body img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
 }
 
 body.light-mode .post-card-summary,
@@ -261,10 +261,23 @@ body.light-mode .tag-cloud-item .count {
   color: #999;
 }
 
-body.light-mode .post-tags,
-body.light-mode .recent-posts h2,
-body.light-mode .featured-tags h2 {
+body.light-mode .post-tags {
   border-color: #e0e0e0;
+}
+
+body.light-mode .post-tags h3 {
+  color: #1a1a1a;
+}
+
+body.light-mode .recent-posts h2,
+body.light-mode .featured-tags h2,
+body.light-mode .list-header h1 {
+  color: #1a1a1a;
+  border-color: #e0e0e0;
+}
+
+body.light-mode .list-description {
+  color: #666;
 }
 
 body.light-mode .related-posts,
@@ -308,6 +321,101 @@ body.light-mode a:hover {
 }
 
 body.light-mode .footer-content a {
+  color: #0066cc;
+}
+
+/* ==================== Taxonomy Light Mode ==================== */
+body.light-mode .taxonomy-page,
+body.light-mode .taxonomy-single-page {
+  background-color: #ffffff;
+  border-color: #e0e0e0;
+}
+
+body.light-mode .taxonomy-header,
+body.light-mode .taxonomy-single-header {
+  border-bottom-color: #e0e0e0;
+}
+
+body.light-mode .taxonomy-header h1,
+body.light-mode .taxonomy-single-title {
+  color: #1a1a1a;
+}
+
+body.light-mode .taxonomy-count,
+body.light-mode .taxonomy-single-count {
+  color: #999;
+}
+
+body.light-mode .taxonomy-item {
+  border-bottom-color: #e0e0e0;
+}
+
+body.light-mode .taxonomy-item-link:hover {
+  background-color: #f8f9fa;
+}
+
+body.light-mode .taxonomy-item-name {
+  color: #1a1a1a;
+}
+
+body.light-mode .taxonomy-item-count {
+  background-color: #e8f4ff;
+  color: #0066cc;
+}
+
+body.light-mode .taxonomy-breadcrumb {
+  color: #666;
+}
+
+body.light-mode .taxonomy-breadcrumb a {
+  color: #0066cc;
+}
+
+body.light-mode .breadcrumb-separator {
+  color: #999;
+}
+
+body.light-mode .taxonomy-breadcrumb .current {
+  color: #333;
+}
+
+body.light-mode .year-heading {
+  color: #1a1a1a;
+  border-bottom-color: #d0d0d0;
+}
+
+body.light-mode .taxonomy-post-item {
+  background-color: #f8f9fa;
+  border-color: #e0e0e0;
+}
+
+body.light-mode .taxonomy-post-item:hover {
+  box-shadow: -4px 0 0 #0066cc;
+}
+
+body.light-mode .taxonomy-post-item .post-item-title a {
+  color: #1a1a1a;
+}
+
+body.light-mode .post-item-date {
+  color: #666;
+}
+
+body.light-mode .post-item-topics {
+  color: #666;
+}
+
+body.light-mode .topic-badge {
+  background-color: #e0e0e0;
+  color: #555;
+}
+
+body.light-mode .taxonomy-post-item .post-item-summary {
+  color: #555;
+}
+
+body.light-mode .tag-small {
+  background-color: #e8f4ff;
   color: #0066cc;
 }
 

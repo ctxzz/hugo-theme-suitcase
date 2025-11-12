@@ -2,9 +2,11 @@
   <div class="home-page">
     <section class="hero">
       <h1 class="hero-title">{{ .Site.Title }}</h1>
+      {{ with .Site.Params.description }}
       <p class="hero-subtitle">
-        {{ .Site.Params.description | default "AI Knowledge Suitcase — 知識を旅するための静かな書斎" }}
+        {{ . }}
       </p>
+      {{ end }}
     </section>
 
     <section class="recent-posts">
