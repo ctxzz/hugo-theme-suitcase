@@ -196,8 +196,8 @@ body.light-mode .post-body code {
 }
 
 body.light-mode .post-body pre {
-  background-color: #2d2d2d;
-  border-color: #404040;
+  background-color: #f8f8f8;
+  border-color: #d0d0d0;
 }
 
 body.light-mode .post-body pre code {
