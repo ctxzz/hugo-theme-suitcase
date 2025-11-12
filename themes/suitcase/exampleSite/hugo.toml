@@ -30,7 +30,7 @@ theme = "suitcase"
 # Hugo設定
 [markup]
   [markup.highlight]
-    style = "monokai"
+    noClasses = false
     lineNos = true
   [markup.goldmark.renderer]
     unsafe = true

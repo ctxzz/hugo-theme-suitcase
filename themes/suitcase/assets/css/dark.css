@@ -4,6 +4,51 @@ body.dark-mode {
   color: #e0e0e0;
 }
 
+/* Syntax Highlighting for Dark Mode */
+body.dark-mode .chroma { background-color: #1e1e1e; }
+body.dark-mode .chroma .err { color: #f48771; }
+body.dark-mode .chroma .k { color: #c586c0; font-weight: bold; } /* Keyword */
+body.dark-mode .chroma .kc { color: #569cd6; } /* Keyword Constant */
+body.dark-mode .chroma .kd { color: #c586c0; } /* Keyword Declaration */
+body.dark-mode .chroma .kn { color: #c586c0; } /* Keyword Namespace */
+body.dark-mode .chroma .kp { color: #c586c0; } /* Keyword Pseudo */
+body.dark-mode .chroma .kr { color: #c586c0; } /* Keyword Reserved */
+body.dark-mode .chroma .kt { color: #4ec9b0; } /* Keyword Type */
+body.dark-mode .chroma .na { color: #9cdcfe; } /* Name Attribute */
+body.dark-mode .chroma .nb { color: #569cd6; } /* Name Builtin */
+body.dark-mode .chroma .nc { color: #4ec9b0; } /* Name Class */
+body.dark-mode .chroma .nf { color: #dcdcaa; } /* Name Function */
+body.dark-mode .chroma .nn { color: #4ec9b0; } /* Name Namespace */
+body.dark-mode .chroma .nt { color: #569cd6; } /* Name Tag */
+body.dark-mode .chroma .nv { color: #9cdcfe; } /* Name Variable */
+body.dark-mode .chroma .s { color: #ce9178; } /* String */
+body.dark-mode .chroma .s1 { color: #ce9178; } /* String Single */
+body.dark-mode .chroma .s2 { color: #ce9178; } /* String Double */
+body.dark-mode .chroma .sb { color: #ce9178; } /* String Backtick */
+body.dark-mode .chroma .sc { color: #ce9178; } /* String Char */
+body.dark-mode .chroma .sd { color: #ce9178; } /* String Doc */
+body.dark-mode .chroma .se { color: #d7ba7d; } /* String Escape */
+body.dark-mode .chroma .si { color: #ce9178; } /* String Interpol */
+body.dark-mode .chroma .sr { color: #d16969; } /* String Regex */
+body.dark-mode .chroma .ss { color: #ce9178; } /* String Symbol */
+body.dark-mode .chroma .m { color: #b5cea8; } /* Number */
+body.dark-mode .chroma .mb { color: #b5cea8; } /* Number Bin */
+body.dark-mode .chroma .mf { color: #b5cea8; } /* Number Float */
+body.dark-mode .chroma .mh { color: #b5cea8; } /* Number Hex */
+body.dark-mode .chroma .mi { color: #b5cea8; } /* Number Integer */
+body.dark-mode .chroma .mo { color: #b5cea8; } /* Number Oct */
+body.dark-mode .chroma .o { color: #d4d4d4; } /* Operator */
+body.dark-mode .chroma .ow { color: #c586c0; } /* Operator Word */
+body.dark-mode .chroma .c { color: #6a9955; font-style: italic; } /* Comment */
+body.dark-mode .chroma .c1 { color: #6a9955; font-style: italic; } /* Comment Single */
+body.dark-mode .chroma .cm { color: #6a9955; font-style: italic; } /* Comment Multi */
+body.dark-mode .chroma .cp { color: #6a9955; font-style: italic; } /* Comment Preproc */
+body.dark-mode .chroma .cpf { color: #6a9955; font-style: italic; } /* Comment PreprocFile */
+body.dark-mode .chroma .p { color: #d4d4d4; } /* Punctuation */
+body.dark-mode .chroma .n { color: #d4d4d4; } /* Name */
+body.dark-mode .chroma .nl { color: #d4d4d4; } /* Name Label */
+body.dark-mode .chroma .bp { color: #569cd6; } /* Name Builtin Pseudo */
+
 body.dark-mode .site-header {
   background-color: #181818;
   border-bottom-color: #2a2a2a;
