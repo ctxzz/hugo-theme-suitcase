@@ -16,11 +16,19 @@
           </h2>
 
           <div class="post-item-meta">
+            {{ if not .Date.IsZero }}
             <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
               🕓 {{ .Date.Format "2006/01/02" }}
             </time>
+            {{ end }}
             {{ with .Params.topics }}
-            <span class="post-topics">📂 {{ delimit . ", " }}</span>
+            <span class="post-topics">
+              📂
+              {{ range $index, $topic := . }}
+                {{ if $index }}, {{ end }}
+                <a href="{{ "topics" | relURL }}/{{ $topic | urlize }}">{{ $topic }}</a>
+              {{ end }}
+            </span>
             {{ end }}
           </div>
 
@@ -33,7 +41,7 @@
           {{ with .Params.tags }}
           <div class="post-item-tags">
             {{ range . }}
-            <span class="tag">{{ . }}</span>
+            <a href="{{ "tags" | relURL }}/{{ . | urlize }}" class="tag">{{ . }}</a>
             {{ end }}
           </div>
           {{ end }}

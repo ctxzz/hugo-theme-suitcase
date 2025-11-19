@@ -314,11 +314,19 @@ img {
 }
 
 .tag {
+  display: inline-block;
   background-color: #2a2a2a;
   color: #7cc0ff;
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
   font-size: 0.85rem;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.tag:hover {
+  background-color: #3a3a3a;
+  transform: translateY(-1px);
 }
 
 .confidence-badge {
@@ -994,6 +1002,17 @@ img {
   margin-bottom: 0.75rem;
 }
 
+.post-item-topics a {
+  color: #7cc0ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.post-item-topics a:hover {
+  color: #9dd0ff;
+  text-decoration: underline;
+}
+
 .topic-badge {
   display: inline-block;
   background-color: #2a2a2a;
@@ -1002,6 +1021,13 @@ img {
   border-radius: 4px;
   margin-right: 0.5rem;
   font-size: 0.85rem;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.topic-badge:hover {
+  background-color: #3a3a3a;
+  color: #d0d0d0;
 }
 
 .taxonomy-post-item .post-item-summary {
@@ -1017,9 +1043,17 @@ img {
 }
 
 .tag-small {
+  display: inline-block;
   background-color: #2a2a2a;
   color: #7cc0ff;
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
   font-size: 0.8rem;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.tag-small:hover {
+  background-color: #3a3a3a;
+  transform: translateY(-1px);
 }
