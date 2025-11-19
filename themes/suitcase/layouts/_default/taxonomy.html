@@ -29,16 +29,18 @@
                 <h3 class="post-item-title">
                   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </h3>
+                {{ if not .Date.IsZero }}
                 <time class="post-item-date" datetime="{{ .Date.Format "2006-01-02" }}">
                   {{ .Date.Format "2006/01/02" }}
                 </time>
+                {{ end }}
               </div>
 
               {{ with .Params.topics }}
               <div class="post-item-topics">
                 📂
                 {{ range first 3 . }}
-                <span class="topic-badge">{{ . }}</span>
+                <a href="{{ "topics" | relURL }}/{{ . | urlize }}" class="topic-badge">{{ . }}</a>
                 {{ end }}
               </div>
               {{ end }}
@@ -52,7 +54,7 @@
               {{ with .Params.tags }}
               <div class="post-item-tags">
                 {{ range first 5 . }}
-                <span class="tag-small">{{ . }}</span>
+                <a href="{{ "tags" | relURL }}/{{ . | urlize }}" class="tag-small">{{ . }}</a>
                 {{ end }}
               </div>
               {{ end }}
