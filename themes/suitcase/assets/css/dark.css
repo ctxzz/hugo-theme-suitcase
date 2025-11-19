@@ -295,6 +295,19 @@ body.light-mode .chroma .n { color: #24292f; } /* Name */
 body.light-mode .chroma .nl { color: #24292f; } /* Name Label */
 body.light-mode .chroma .bp { color: #0550ae; } /* Name Builtin Pseudo */
 
+/* Code block scrollbar for Light Mode */
+body.light-mode .post-body pre::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .post-body pre::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .post-body pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
 /* Copy Button for Light Mode */
 body.light-mode .copy-button {
   background-color: rgba(0, 0, 0, 0.05);
