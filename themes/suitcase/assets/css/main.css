@@ -1110,3 +1110,162 @@ img {
   background-color: #3a3a3a;
   transform: translateY(-1px);
 }
+
+/* ==================== Responsive Design ==================== */
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #2a2a2a;
+    position: static;
+    max-height: none;
+  }
+
+  .content {
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .site-title {
+    font-size: 1.25rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .sidebar {
+    padding: 1.5rem 1rem;
+  }
+
+  .sidebar-nav ul,
+  .tag-cloud,
+  .topic-list {
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .post-title {
+    font-size: 1.75rem;
+  }
+
+  .post-body {
+    font-size: 1rem;
+  }
+
+  .post-body pre {
+    padding: 1rem;
+    font-size: 0.85rem;
+    margin: 1rem -1rem;
+    border-radius: 0;
+    max-width: calc(100vw - 2rem);
+  }
+
+  .post-body code {
+    font-size: 0.85em;
+  }
+
+  .copy-button {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.4rem;
+  }
+
+  .taxonomy-item-link {
+    padding: 0.75rem 1rem;
+  }
+
+  .taxonomy-post-item {
+    padding: 1rem;
+  }
+
+  .post-item {
+    padding: 1rem;
+  }
+
+  .metadata {
+    padding: 1rem;
+  }
+
+  .related-posts,
+  .manual-related {
+    padding: 1rem;
+  }
+
+  .post-body img {
+    margin: 1rem -1rem;
+    border-radius: 0;
+    max-width: calc(100% + 2rem);
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.1rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
+  }
+
+  .post-body h1 {
+    font-size: 1.5rem;
+  }
+
+  .post-body h2 {
+    font-size: 1.3rem;
+  }
+
+  .post-body h3 {
+    font-size: 1.15rem;
+  }
+
+  .sidebar {
+    padding: 1rem;
+  }
+
+  .content {
+    padding: 1rem 0.75rem;
+  }
+
+  .post-body pre {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+}

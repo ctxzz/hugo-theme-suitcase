@@ -18,11 +18,11 @@
     </header>
 
     <div class="taxonomy-posts-list">
-      {{ $validPages := where .Pages ".Date.IsZero" false }}
-      {{ range $validPages.GroupByDate "2006" }}
+      {{ range .Pages.GroupByDate "2006" }}
       <section class="posts-year-group">
         {{ if ne .Key "0001" }}
         <h2 class="year-heading">{{ .Key }}</h2>
+        {{ end }}
         <div class="posts-in-year">
           {{ range .Pages }}
             {{ if or (not .Params.visibility) (eq .Params.visibility "public") }}
@@ -64,7 +64,6 @@
             {{ end }}
           {{ end }}
         </div>
-        {{ end }}
       </section>
       {{ end }}
     </div>
