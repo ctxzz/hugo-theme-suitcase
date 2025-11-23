@@ -556,3 +556,10 @@ body.light-mode ::-webkit-scrollbar-thumb {
 body.light-mode ::-webkit-scrollbar-thumb:hover {
   background: #b0b0b0;
 }
+
+/* Mobile Search for Light Mode */
+@media (max-width: 768px) {
+  body.light-mode .mobile-search {
+    border-top-color: #e0e0e0;
+  }
+}
