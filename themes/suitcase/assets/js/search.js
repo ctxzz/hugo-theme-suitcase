@@ -19,9 +19,21 @@
   // Load search index
   async function loadSearchIndex() {
     try {
-      const response = await fetch('/index.json');
-      if (!response.ok) {
-        console.error('Failed to load search index');
+      // Try multiple paths for index.json
+      let response;
+      const paths = ['/index.json', './index.json', window.location.pathname + 'index.json'];
+
+      for (const path of paths) {
+        try {
+          response = await fetch(path);
+          if (response.ok) break;
+        } catch (e) {
+          continue;
+        }
+      }
+
+      if (!response || !response.ok) {
+        console.error('Failed to load search index from any path');
         return;
       }
       searchIndex = await response.json();
