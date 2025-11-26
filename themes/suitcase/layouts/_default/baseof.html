@@ -6,10 +6,8 @@
     <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
-    {{ $mainCSS := resources.Get "css/main.css" }}
-    {{ $darkCSS := resources.Get "css/dark.css" }}
-    <link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}">
-    <link rel="stylesheet" href="{{ $darkCSS.RelPermalink }}">
+    {{ $stylesCSS := resources.Get "css/styles.css" }}
+    <link rel="stylesheet" href="{{ $stylesCSS.RelPermalink }}">
 
     <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
