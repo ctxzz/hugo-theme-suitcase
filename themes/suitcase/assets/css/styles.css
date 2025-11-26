@@ -574,6 +574,23 @@ img {
   max-width: 100%;
 }
 
+/* Hugo's highlight wrapper - when used as code-block-wrapper */
+.highlight.code-block-wrapper {
+  position: relative;
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.highlight.code-block-wrapper pre {
+  margin: 0;
+}
+
+/* Remove double wrapper styling */
+.highlight .code-block-wrapper {
+  margin: 0;
+}
+
 .copy-button {
   position: absolute;
   top: 0.75rem;
